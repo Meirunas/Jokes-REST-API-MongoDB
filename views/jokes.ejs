@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jokes</title>
+    <style>
+        /* Reset default margin and padding */
+        body, h1, ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif; /* Use a commonly available font */
+            line-height: 1.6; /* Improved readability */
+            background-color: #f9f9f9; /* Light background color */
+            color: #333; /* Dark text color */
+        }
+
+        .container {
+            max-width: 800px; /* Limit content width for better readability */
+            margin: 0 auto; /* Center the container horizontally */
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center; /* Center the heading */
+            margin-bottom: 20px; /* Add some space below the heading */
+        }
+
+        ul {
+            list-style-type: none; /* Remove list bullets */
+            padding-left: 0; /* Remove default padding */
+        }
+
+        li {
+            background-color: #fff; /* White background for each joke item */
+            padding: 15px; /* Add padding for each joke item */
+            margin-bottom: 15px; /* Add space between each joke item */
+            border-radius: 5px; /* Add rounded corners */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Jokes</h1>
+        <ul>
+            <% jokes.forEach(joke => { %>
+                <li><%= joke.joke %></li>
+            <% }); %>
+        </ul>
+    </div>
+</body>
+</html>
